@@ -1,6 +1,6 @@
 ## 概要
-create-next-app をベースにして shadcn/ui が使えるようにしたテンプレートです。  
-tailwindcss の設定を追加しています。
+create-next-app をベースにして、すぐに shadcn/ui が使えるようにしたテンプレートです。  
+tailwindcss のサポート設定を追加しています。
 
 ## 使い方
 

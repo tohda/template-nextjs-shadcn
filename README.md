@@ -30,7 +30,7 @@ bunx shadcn-ui@latest init
 * color: Zinc
 * CSS variables for colors: yes
 
-### 拡張機能「Prettier - Code formatter」
+### 拡張機能「Prettier - Code formatter」の設定
 設定ファイル：.prettierrc
 
 ```json:
@@ -40,7 +40,7 @@ bunx shadcn-ui@latest init
 }
 ```
 
-### ライブラリ「prettier-plugin-tailwindcss」
+### ライブラリ「prettier-plugin-tailwindcss」の追加
 Tailwind公式のPrettier用プラグイン  
 classに渡された文字列からTailwindCSSクラスを含む属性を探して、推奨されるクラスの順序に従ってそれらを自動的に並べ替えられます。
 
@@ -56,7 +56,7 @@ classに渡された文字列からTailwindCSSクラスを含む属性を探し�
 }
 ```
 
-### ライブラリ「eslint-plugin-tailwindcss」
+### ライブラリ「eslint-plugin-tailwindcss」の追加
 classのコンフリクト、tailwindにサポートされていないクラスの使用、冗長な記述などを指摘してくれます。
 
 設定ファイル：.eslintrc.json
@@ -66,12 +66,16 @@ classのコンフリクト、tailwindにサポートされていないクラス�
   "plugins": ["tailwindcss"]
 }
 ```
-
-
 ## 推奨設定になっているVSCode拡張機能
-.vscode/extensions.json
+設定ファイル： `.vscode/extensions.json`
 
-### Tailwind CSS IntelliSense 
+### [shadcn/ui](https://marketplace.visualstudio.com/items?itemName=SuhelMakkad.shadcn-ui)
+コマンドパレットからshadcn/uiコンポーネントの追加ができる。
+
+### [easy-simple-react-snippets-lite](https://marketplace.visualstudio.com/items?itemName=nino.easy-simple-react-snippets-lite)
+Reactの記述に便利なスニペット
+
+### [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - Tailwind CSSのClass名を自動補完
 - マウスオーバー時のCSSプレビュー
 
@@ -84,7 +88,7 @@ VSCodeの settings.json
 }
 ```
 
-### PostCSS Language Support
+### [PostCSS Language Support](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
 PostCSS の言語サポート  
 @tailwind、@apply、@screenのカスタムCSSを使った際に発生するVSCodeのエラーが解決できます。
 

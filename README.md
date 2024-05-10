@@ -75,6 +75,9 @@ classのコンフリクト、tailwindにサポートされていないクラス�
 ### [easy-simple-react-snippets-lite](https://marketplace.visualstudio.com/items?itemName=nino.easy-simple-react-snippets-lite)
 Reactの記述に便利なスニペット
 
+### [File Utils](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils)
+コマンドパレットからファイル操作ができる。
+
 ### [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - Tailwind CSSのClass名を自動補完
 - マウスオーバー時のCSSプレビュー

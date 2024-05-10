@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 概要
+create-next-app をベースにして shadcn/ui が使えるようにしたテンプレートです。  
+tailwindcss の設定を追加しています。
 
-## Getting Started
-
-First, run the development server:
+## 使い方
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bunx create-next-app -e https://github.com/tohda/template-nextjs-shadcn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`-e, --example [github-url]`：指定したURLのリポジトリをテンプレートにします。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[options](https://nextjs.org/docs/pages/api-reference/create-next-app#options)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## テンプレートの内容
 
-## Learn More
+```
+npx create-next-app@latest
+```
 
-To learn more about Next.js, take a look at the following resources:
+<img src="https://github.com/tohda/template-nextjs-shadcn/assets/16369289/81b0fa3c-a40a-40e2-a560-04e710642c56" width="600">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### shadcn/ui を初期化済
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+bunx shadcn-ui@latest init
+```
 
-## Deploy on Vercel
+* style: Default
+* color: Zinc
+* CSS variables for colors: yes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 拡張機能「Prettier - Code formatter」
+設定ファイル：.prettierrc
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```json:
+{
+  "tabWidth": 2,
+  "semi": true,
+}
+```
+
+### ライブラリ「prettier-plugin-tailwindcss」
+Tailwind公式のPrettier用プラグイン  
+classに渡された文字列からTailwindCSSクラスを含む属性を探して、推奨されるクラスの順序に従ってそれらを自動的に並べ替えられます。
+
+設定ファイル：.prettierrc
+```
+{
+  "plugins": [
+    "prettier-plugin-svelte",
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss" // 最後に読み込む
+  ],
+  "pluginSearchDirs": false
+}
+```
+
+### ライブラリ「eslint-plugin-tailwindcss」
+classのコンフリクト、tailwindにサポートされていないクラスの使用、冗長な記述などを指摘してくれます。
+
+設定ファイル：.eslintrc.json
+```
+{
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "plugins": ["tailwindcss"]
+}
+```
+
+
+## テンプレートの推奨設定になっているVSCode拡張機能
+
+### Tailwind CSS IntelliSense 
+- Tailwind CSSのClass名を自動補完
+- マウスオーバー時のCSSプレビュー
+
+デフォルトだとクラス名の自動補完の表示されるタイミングが遅かったり、クラス名を書き直したい時に補完されないことがあるため、以下の設定で常にクラス名候補を表示してくれるようになります。  
+
+VSCodeの settings.json
+```
+"editor.quickSuggestions": {
+  "strings": true
+}
+```
+
+### PostCSS Language Support
+PostCSS の言語サポート  
+@tailwind、@apply、@screenのカスタムCSSを使った際に発生するVSCodeのエラーが解決できます。
+
+<img src="https://github.com/tohda/template-nextjs-shadcn/assets/16369289/dd2ace23-541c-443b-9655-cf767522faf8" width="400">

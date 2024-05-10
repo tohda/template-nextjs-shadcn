@@ -68,7 +68,8 @@ classのコンフリクト、tailwindにサポートされていないクラス�
 ```
 
 
-## テンプレートの推奨設定になっているVSCode拡張機能
+## 推奨設定になっているVSCode拡張機能
+.vscode/extensions.json
 
 ### Tailwind CSS IntelliSense 
 - Tailwind CSSのClass名を自動補完

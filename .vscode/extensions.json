@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
